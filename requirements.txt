@@ -1,0 +1,10 @@
+numpy
+pandas
+Django 
+scikit-learn
+seaborn
+opencv-python
+matplotlib
+flask
+tensorflow==2.13.0
+imutils
