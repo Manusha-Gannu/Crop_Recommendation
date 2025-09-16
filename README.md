@@ -136,7 +136,7 @@ soil-crop-recommendation/
 
 ---
 
-## 🖼️ Screenshots (Add Your Own)
+## 🖼️ Screenshots
 
 * Dataset view
 ![Screenshot3](Screenshots/Screenshot3.png)
