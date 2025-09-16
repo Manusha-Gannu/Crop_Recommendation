@@ -139,13 +139,13 @@ soil-crop-recommendation/
 ## 🖼️ Screenshots (Add Your Own)
 
 * Dataset view
-![screenshot3](screenshots/screenshot3.png)
+![Screenshot3](Screenshots/Screenshot3.png)
 
 * Soil Image Upload Form
-![screenshot1](screenshots/screenshot1.png)
+![Screenshot1](Screenshots/Screenshot1.png)
 
 * Predicted Soil Type Display
-![screenshot2](screenshots/screenshot2.png)
+![Screenshot2](Screenshots/Screenshot2.png)
 
 
 ```
