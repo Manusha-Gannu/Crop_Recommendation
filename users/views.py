@@ -222,9 +222,9 @@ def trainning(request):
             import shutil
 
     # Set paths to your soil image folders and the destination folders for train and test sets
-    data_root = r'C:\Users\manuk\Downloads\soil_analysis\soil_analysis\media\Soil types'
-    train_root = r'C:\Users\manuk\Downloads\soil_analysis\soil_analysis\media\train'
-    test_root = r'C:\Users\manuk\Downloads\soil_analysis\soil_analysis\media\test'
+    data_root = os.path.join(settings.MEDIA_ROOT, 'Soil types')
+    train_root = os.path.join(settings.MEDIA_ROOT, 'train')
+    test_root = os.path.join(settings.MEDIA_ROOT, 'test')
 
     # List of soil image folders
     soil_folders = ["Black Soil", "Cinder Soil", "Laterite Soil", "Peat Soil", "Yellow Soil"]
@@ -269,8 +269,8 @@ def trainning(request):
 
     print("Dataset splitting completed.")
 
-    train_dir =r'C:\Users\manuk\Downloads\soil_analysis\soil_analysis\media\train'
-    test_dir = r'C:\Users\manuk\Downloads\soil_analysis\soil_analysis\media\test'
+    train_dir = train_root
+    test_dir = test_root
 
     image_size = 224
 
@@ -383,9 +383,7 @@ def prediction(request):
         fs = FileSystemStorage(location="media/")
         filename = fs.save(image_file.name, image_file)
         # detect_filename = fs.save(image_file.name, image_file)
-        uploaded_file_url = "/media/Black Soil/" + filename  # fs.url(filename)
-        print("Image path ", uploaded_file_url)
-        model_path =os.path.join(settings.MEDIA_ROOT, 'SoilNet.h5')
+        model_path = 'SoilNet.h5'
         file=os.path.join(settings.MEDIA_ROOT, filename) 
         SoilNet = load_model(model_path)
         from users.utility.utility.Algorithm import model_predict
